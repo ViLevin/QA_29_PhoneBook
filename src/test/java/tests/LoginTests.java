@@ -7,7 +7,7 @@ public class LoginTests extends TestBase {
     @Test
     public void loginSuccess() {
         app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("vilevinqa@gmail.com", "12345678");
+        app.getHelperUser().fillLoginRegistrationForm("test12@gmail.com", "vilevinQa!1234");
         app.getHelperUser().submitLogin();
 
     }
