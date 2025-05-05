@@ -10,10 +10,10 @@ public class HelperUser extends HelperBase {
     }
 
     public void openLoginRegistrationForm() {
-//        WebElement loginTab = wd.findElement(By.xpath("/a[text()='LOGIN']"));
+//        WebElement loginTab = wd.findElement(By.xpath("//a[text()='Login]"));
 //        WebElement loginTab = wd.findElement(By.cssSelector("a/href='/login'"));
 //        loginTab.click();
-        click(By.xpath("/a[text()='LOGIN']"));
+        click(By.xpath("//a[text()='LOGIN']"));
 
 
     }
@@ -32,7 +32,7 @@ public class HelperUser extends HelperBase {
         type(By.xpath("//input[last()]"), password);
     }
 
-    public void submitLogin(){
-        click(By.xpath("//button[text()='LOGIN']"));
+    public void submitLogin() {
+        click(By.xpath("//button[text()='Login']"));
     }
 }

@@ -24,8 +24,8 @@ public class HelperBase {
     }
 
     public void click(By locator){
-
-
+        WebElement element = wd.findElement(locator);
+        element.click();
     }
 
 }
