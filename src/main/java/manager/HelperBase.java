@@ -18,16 +18,19 @@ public class HelperBase {
     }
 
     public void type(By locator, String text) {
-
         WebElement element = wd.findElement(locator);
         element.click();
         element.clear();
         if (text != null) {
             element.sendKeys(text);
         }
-
-
     }
+
+    public void click(By locator) {
+        WebElement element = wd.findElement(locator);
+        element.click();
+    }
+
 
     public boolean isElementPresent(By locator) {
         List<WebElement> list = wd.findElements(locator);
@@ -35,23 +38,16 @@ public class HelperBase {
     }
 
 
-    public boolean isAlertPresent(By locator) {
+    public boolean isAlertPresent(String message) {
         Alert alert = new WebDriverWait(wd, Duration.ofSeconds(10)).until(ExpectedConditions.alertIsPresent());
         if (alert != null && alert.getText().contains("message")) {
 //            alert.accept(); ---> click OK
 //            alert.dismiss(); ---> click Cancel
-//            alert.sendKeys(@hELLO@);
+//            alert.sendKeys("Hello"); ---> type into alert
             alert.accept();
             return true;
         }
-
         return false;
-    }
-
-
-    public void click(By locator) {
-        WebElement element = wd.findElement(locator);
-        element.click();
     }
 
 }

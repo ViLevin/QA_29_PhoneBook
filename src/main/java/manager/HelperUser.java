@@ -2,9 +2,7 @@ package manager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-import java.util.List;
 
 public class HelperUser extends HelperBase {
     public HelperUser(WebDriver wd) {
@@ -12,12 +10,10 @@ public class HelperUser extends HelperBase {
     }
 
     public void openLoginRegistrationForm() {
-//        WebElement loginTab = wd.findElement(By.xpath("//a[text()='Login]"));
-//        WebElement loginTab = wd.findElement(By.cssSelector("a/href='/login'"));
+//        WebElement loginTab = wd.findElement(By.xpath("//a[text()='LOGIN']"));
+//        WebElement loginTab = wd.findElement(By.cssSelector("a[href='/login']"));
 //        loginTab.click();
         click(By.xpath("//a[text()='LOGIN']"));
-
-
     }
 
     public void fillLoginRegistrationForm(String email, String password) {
@@ -28,6 +24,7 @@ public class HelperUser extends HelperBase {
         type(By.name("email"), email);
 
 //        WebElement passwordInput = wd.findElement(By.xpath("//input[last()]"));
+
 //        passwordInput.click();
 //        passwordInput.clear();
 //        passwordInput.sendKeys(password);
@@ -40,7 +37,6 @@ public class HelperUser extends HelperBase {
 
     public boolean isLogged() {
         return isElementPresent(By.xpath("//button[text()='Sign Out']"));
-
     }
 
     public void logout() {
