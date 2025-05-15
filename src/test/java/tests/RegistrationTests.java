@@ -30,10 +30,37 @@ public class RegistrationTests extends TestBase {
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationFormObj(user);
         app.getHelperUser().submitRegistration();
-
-
-
+        Assert.assertTrue(app.getHelperUser().isNoContactsHereDisplayed());
         Assert.assertTrue(app.getHelperUser().isLogged());
 
     }
-}
+
+    @Test(description = "Bug report #11132 (=> Fixed)", enabled = false)
+    public void registrationWrongEmail() {
+
+               User user = new User()
+                .setEmail("testgmail.com")
+                .setPassword("vilevinQa!1234");
+
+
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationFormObj(user);
+        app.getHelperUser().submitRegistration();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format"));
+
+
+    }
+
+    @Test
+    public void registrationWrongPassword() {
+        User user = new User()
+                .setEmail("test@gmail.com")
+                .setPassword("vilevinQa!1234");
+
+
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationFormObj(user);
+        app.getHelperUser().submitRegistration();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format"));
+    }
+    }
