@@ -36,7 +36,7 @@ public class HelperUser extends HelperBase {
         type(By.xpath("//input[last()]"), password);
     }
 
-    public void fillLoginRegistrationFormObj(User user){
+    public void fillLoginRegistrationFormObj(User user) {
         type(By.name("email"), user.getEmail());
         type(By.name("password"), user.getPassword());
     }
@@ -59,8 +59,14 @@ public class HelperUser extends HelperBase {
 
     public boolean isNoContactsHereDisplayed() {
         WebDriverWait wait = new WebDriverWait(wd, Duration.ofSeconds(5));
-        boolean res = wait.until(ExpectedConditions.textToBePresentInElement(wd.findElement(By.cssSelector(".contact-page_message__2qafk>h1")), "No contacts Here!"));
-        return res;
+        return (wait.until(ExpectedConditions.textToBePresentInElement(wd.findElement(By.cssSelector(".contact-page_message__2qafk>h1")), "No Contacts here!")));
+    }
+
+    public void login(User user) {
+        openLoginRegistrationForm();
+        fillLoginRegistrationFormObj(user);
+        submitRegistration();
+        submitLogin();
     }
 }
 

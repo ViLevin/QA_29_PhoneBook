@@ -23,44 +23,62 @@ public class RegistrationTests extends TestBase {
         System.out.println(z);
 
         User user = new User()
-                .setEmail("test" + z + "@gmail.com")
-                .setPassword("vilevinQa!1234");
+                .withEmail("test" + z + "@gmail.com")
+                .withPassword("vilevinQa!1234");
 
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationFormObj(user);
         app.getHelperUser().submitRegistration();
-        Assert.assertTrue(app.getHelperUser().isNoContactsHereDisplayed());
-        Assert.assertTrue(app.getHelperUser().isLogged());
 
+        Assert.assertTrue(app.getHelperUser().isLogged());
+        Assert.assertTrue(app.getHelperUser().isNoContactsHereDisplayed());
     }
 
-    @Test(description = "Bug report #11132 (=> Fixed)", enabled = false)
+
+    @Test() //description = "Bug report #11132 (=> Fixed)", enabled = false) --->  makes test enabled
     public void registrationWrongEmail() {
 
-               User user = new User()
-                .setEmail("testgmail.com")
-                .setPassword("vilevinQa!1234");
+        User user = new User()
+                .withEmail("testgmail.com")
+                .withPassword("vilevinQa!1234");
 
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationFormObj(user);
         app.getHelperUser().submitRegistration();
+
         Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format"));
-
-
     }
+
 
     @Test
     public void registrationWrongPassword() {
         User user = new User()
-                .setEmail("test@gmail.com")
-                .setPassword("vilevinQa!1234");
-
+                .withEmail("test@gmail.com")
+                .withPassword("vinQ!14");
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationFormObj(user);
         app.getHelperUser().submitRegistration();
         Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format"));
     }
+
+
+    @Test
+    public void registrationExistUser() {
+        User user = new User()
+                .withEmail("test12@gmail.com")
+                .withPassword("vilevinQa!1234");
+
+
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationFormObj(user);
+        app.getHelperUser().submitRegistration();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("User already exist"));
+
+
     }
+
+
+}
