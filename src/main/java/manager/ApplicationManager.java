@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
     WebDriver wd;
+
     HelperUser helperUser;
     HelperContact helperContact;
 
