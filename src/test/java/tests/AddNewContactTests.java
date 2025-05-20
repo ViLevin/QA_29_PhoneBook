@@ -29,6 +29,9 @@ public class AddNewContactTests extends TestBase {
                 .address("Israel, KfarSaba, Street, 5")
                 .description("BenAdam")
                 .build();
+        app.getHelperContact().openAddContactForm();
+        app.getHelperContact().fillContactForm(contact);
+//        app.getHelperContact().clickSaveButton();
 
 
     }
