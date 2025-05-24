@@ -21,9 +21,16 @@ public class HelperBase {
         WebElement element = wd.findElement(locator);
         element.click();
         element.clear();
+        clearNew(element);
         if (text != null) {
             element.sendKeys(text);
         }
+    }
+
+    public void clearNew(WebElement element) {
+        element.sendKeys(" ");
+        element.sendKeys(Keys.BACK_SPACE);
+
     }
 
     public void click(By locator) {
@@ -35,6 +42,11 @@ public class HelperBase {
     public boolean isElementPresent(By locator) {
         List<WebElement> list = wd.findElements(locator);
         return list.size() > 0;
+    }
+
+    public Integer listLocatorSize(By locator) {
+        List<WebElement> list = wd.findElements(locator);
+        return list.size();
     }
 
 
@@ -49,6 +61,16 @@ public class HelperBase {
         }
         return false;
     }
+
+
+    public void pause(int time) {
+        try {
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     public void getScreen(String link) {
         TakesScreenshot takesScreenshot = (TakesScreenshot) wd;

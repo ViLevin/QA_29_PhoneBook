@@ -67,6 +67,14 @@ public class HelperUser extends HelperBase {
         fillLoginRegistrationFormObj(user);
         submitLogin();
     }
+
+
+    public void findExistContactAndRemove() throws InterruptedException {
+        click(By.xpath("//div[@class='contact-item_card__2SOIM']"));
+        Thread.sleep(1000);
+        click(By.xpath("//button[text()='Remove']"));
+        Thread.sleep(1000);
+    }
 }
 
 

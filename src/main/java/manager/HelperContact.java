@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.sql.Time;
 import java.util.List;
 
 public class HelperContact extends HelperBase {
@@ -60,10 +59,45 @@ public class HelperContact extends HelperBase {
         return false;
     }
 
-    public boolean isAddContactPageStillDisplayed() {
+    public boolean isAddNewContactPageStillDisplayed() {
         return isElementPresent(By.cssSelector("a.active[href='/add']"));
     }
 
-//    public void pause(Time) {
-//    }
+    public void addNewContact() throws InterruptedException {
+        int i = (int) (Math.random() * 9000 + 1000);
+
+        Contact contact = Contact.builder()
+                .name("Ben" + i)
+                .lastName("Adam")
+                .email("ben" + i + "@gmail.com")
+                .phone("05012300" + i)
+                .address("Israel, KfarSaba, Street, 5")
+                .description("BenAdam")
+                .build();
+        openAddContactForm();
+//        Thread.sleep(1000);
+        pause(10000);
+        fillContactForm(contact);
+//        Thread.sleep(1000);
+        pause(10000);
+        saveContact();
+//        Thread.sleep(1000);
+        pause(10000);
+    }
+
+    public Contact returnNewContact() {
+        int i = (int) (Math.random() * 9000 + 1000);
+
+        Contact contact = Contact.builder()
+                .name("Ben" + i)
+                .lastName("Adam")
+                .email("ben" + i + "@gmail.com")
+                .phone("05012300" + i)
+                .address("Israel, KfarSaba, Street, 5")
+                .description("BenAdam")
+                .build();
+        return contact;
+    }
+
+
 }
