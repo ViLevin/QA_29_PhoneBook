@@ -1,0 +1,34 @@
+20:20:37.382 INFO  manager.ApplicationManager - All tests runs in Chrome Browser
+20:20:37.914 INFO  manager.WDListener - URLhttps://telranedu.web.app
+20:20:38.497 INFO  manager.ApplicationManager - The link --> https://telranedu.web.app/home
+20:20:38.527 INFO  tests.TestBase - Name of method ---> loginSuccessModel
+20:20:38.529 INFO  manager.WDListener - Before find element --> By.xpath: //button[text()='Sign Out']
+20:20:43.620 INFO  manager.WDListener - After find element --> By.xpath: //a[text()='LOGIN']
+20:20:43.648 INFO  manager.WDListener - Location of element (1810, 34)
+20:20:43.679 INFO  manager.WDListener - Before click element atextLOGIN
+20:20:43.777 INFO  manager.WDListener - After click element 
+20:20:43.813 INFO  manager.WDListener - After find element --> By.name: email
+20:20:43.829 INFO  manager.WDListener - Location of element (760, 250)
+20:20:43.846 INFO  manager.WDListener - Before click element inputtext
+20:20:43.946 INFO  manager.WDListener - After click element 
+20:20:44.053 INFO  manager.WDListener - sendKeys ---> inputtext
+20:20:44.115 INFO  manager.WDListener - sendKeys ---> inputtext
+20:20:44.194 INFO  manager.WDListener - sendKeys ---> inputtext
+20:20:49.236 INFO  manager.WDListener - Huston, we have a problem!
+20:20:49.236 INFO  manager.WDListener - *************************************
+20:20:49.236 INFO  manager.WDListener - Object tagetChromeDriver: chrome on windows (6c3470c8af047be6af1f799d567434cd)
+20:20:49.236 INFO  manager.WDListener - *************************************
+20:20:49.236 INFO  manager.WDListener - Method name --->findElement
+20:20:49.237 INFO  manager.WDListener - *************************************
+20:20:49.238 INFO  manager.WDListener - InvocationTargetExeptionorg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[la]"}
+  (Session info: chrome=137.0.7151.41)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6c3470c8af047be6af1f799d567434cd, findElement {using=xpath, value=//input[la]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52146}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52146/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c3470c8af047be6af1f799d567434cd
+20:20:49.239 INFO  manager.WDListener - *************************************
+20:20:49.967 INFO  manager.WDListener - Screen with error is --->src/test/screenshots/screen_1060.png
+20:20:49.967 INFO  tests.TestBase - =====================================================================================
