@@ -63,28 +63,28 @@ public class HelperContact extends HelperBase {
         return isElementPresent(By.cssSelector("a.active[href='/add']"));
     }
 
-    public void addNewContact() throws InterruptedException {
-        int i = (int) (Math.random() * 9000 + 1000);
+//    public void addNewContact() throws InterruptedException {
+//        int i = (int) (Math.random() * 9000 + 1000);
+//
+//        Contact contact = Contact.builder()
+//                .name("Ben" + i)
+//                .lastName("Adam")
+//                .email("ben" + i + "@gmail.com")
+//                .phone("05012300" + i)
+//                .address("Israel, KfarSaba, Street, 5")
+//                .description("BenAdam")
+//                .build();
+//        openAddContactForm();
+////        Thread.sleep(1000);
+//        pause(10000);
+//        fillContactForm(contact);
+////        Thread.sleep(1000);
+//        pause(10000);
+//        saveContact();
 
-        Contact contact = Contact.builder()
-                .name("Ben" + i)
-                .lastName("Adam")
-                .email("ben" + i + "@gmail.com")
-                .phone("05012300" + i)
-                .address("Israel, KfarSaba, Street, 5")
-                .description("BenAdam")
-                .build();
-        openAddContactForm();
-//        Thread.sleep(1000);
-        pause(10000);
-        fillContactForm(contact);
-//        Thread.sleep(1000);
-        pause(10000);
-        saveContact();
-//        Thread.sleep(1000);
-        pause(10000);
-    }
-
+    /// /        Thread.sleep(1000);
+//        pause(10000);
+//    }
     public Contact returnNewContact() {
         int i = (int) (Math.random() * 9000 + 1000);
 
@@ -99,5 +99,56 @@ public class HelperContact extends HelperBase {
         return contact;
     }
 
+
+    public int removeOneContact() {
+        int before = countOfContacts();
+        logger.info("Number of contact list before remove is ---> " + before);
+        removeContact();
+        int after = countOfContacts();
+        logger.info("Number of contact list after remove is ---> " + after);
+
+        return before - after;
+    }
+
+    private void removeContact() {
+        click(By.xpath("//div[@class='contact-item_card__2SOIM']"));
+        pause(1500);
+        click(By.xpath("//button[text()='Remove']"));
+        pause(1500);
+    }
+
+    private int countOfContacts() {
+        return wd.findElements(By.xpath("//div[@class='contact-item_card__2SOIM']")).size();
+    }
+
+    public void removeAllContacts() {
+        while (countOfContacts() != 0)
+            removeContact();
+    }
+
+    public void provideContacts() {
+        if (countOfContacts() < 3){
+            for(int i = 0; i <3; i++){
+                addNewContact();
+            }
+        }
+    }
+
+    private void addNewContact() {
+        int i = (int) (Math.random() * 9000 + 1000);
+        Contact contact = Contact.builder()
+                .name("Ben" + i)
+                .lastName("Adam")
+                .email("ben" + i + "@gmail.com")
+                .phone("05012300" + i)
+                .address("Israel, KfarSaba, Street, 5")
+                .description("BenAdam")
+                .build();
+
+        openAddContactForm();
+        fillContactForm(contact);
+        saveContact();
+        pause(1000);
+    }
 
 }
