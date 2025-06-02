@@ -1,0 +1,36 @@
+13:38:47.457 INFO  manager.ApplicationManager - All tests runs in Chrome Browser
+13:38:47.950 INFO  manager.WDListener - URLhttps://telranedu.web.app
+13:38:48.654 INFO  manager.ApplicationManager -  The link --> https://telranedu.web.app/home
+13:38:48.667 INFO  tests.TestNGListener - start testing on date --->Mon Jun 02 13:38:48 IDT 2025
+13:38:48.691 INFO  tests.TestBase - Name of method ---> registrationSuccess
+13:38:48.693 INFO  manager.WDListener - Before find element --> By.xpath: //button[text()='Sign Out']
+13:38:53.733 INFO  tests.TestNGListener - start test --->registrationSuccess
+13:38:53.777 INFO  manager.WDListener - After find element --> By.xpath: //a[text()='LOGIN']
+13:38:53.802 INFO  manager.WDListener - Location of element (1810, 34)
+13:38:53.834 INFO  manager.WDListener - Before click element atextLOGIN
+13:38:53.940 INFO  manager.WDListener - After click element 
+13:38:53.973 INFO  manager.WDListener - After find element --> By.name: email
+13:38:53.991 INFO  manager.WDListener - Location of element (760, 250)
+13:38:54.022 INFO  manager.WDListener - Before click element inputtext
+13:38:54.120 INFO  manager.WDListener - After click element 
+13:38:54.240 INFO  manager.WDListener - sendKeys ---> inputtext
+13:38:54.304 INFO  manager.WDListener - sendKeys ---> inputtext
+13:38:54.387 INFO  manager.WDListener - sendKeys ---> inputtext
+13:38:54.421 INFO  manager.WDListener - After find element --> By.name: password
+13:38:54.437 INFO  manager.WDListener - Location of element (760, 320)
+13:38:54.462 INFO  manager.WDListener - Before click element inputtext
+13:38:54.548 INFO  manager.WDListener - After click element 
+13:38:54.648 INFO  manager.WDListener - sendKeys ---> inputtext
+13:38:54.707 INFO  manager.WDListener - sendKeys ---> inputtext
+13:38:54.781 INFO  manager.WDListener - sendKeys ---> inputtext
+13:38:54.782 INFO  tests.TestBase - Test data -->   email: test3535@gmail.com passwords: vilevinQa!1234
+13:38:54.810 INFO  manager.WDListener - After find element --> By.xpath: //button[text()='Registration']
+13:38:54.828 INFO  manager.WDListener - Location of element (1010, 390)
+13:38:54.848 INFO  manager.WDListener - Before click element buttontextRegistration
+13:38:54.936 INFO  manager.WDListener - After click element 
+13:38:54.936 INFO  manager.WDListener - Before find element --> By.xpath: //button[text()='Sign Out']
+13:38:56.321 INFO  manager.WDListener - After find element --> By.cssSelector: .contact-page_message__2qafk>h1
+13:38:56.340 INFO  manager.WDListener - Location of element (825, 271)
+13:38:56.357 INFO  tests.TestNGListener - start test --->registrationSuccess
+13:38:56.358 INFO  tests.TestBase - =====================================================================================
+13:38:56.360 INFO  tests.TestNGListener - finish testing on date --->Mon Jun 02 13:38:56 IDT 2025

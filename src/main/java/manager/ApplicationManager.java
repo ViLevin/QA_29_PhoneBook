@@ -26,7 +26,7 @@ public class ApplicationManager {
         wd = new EventFiringDecorator(webDriverListener).decorate(wd);
 
         wd.navigate().to("https://telranedu.web.app");
-        logger.info("The link --> " + wd.getCurrentUrl());
+        logger.info(" The link --> " + wd.getCurrentUrl());
         helperUser = new HelperUser(wd);
         helperContact = new HelperContact(wd);
 

@@ -1,0 +1,6 @@
+11:10:41.498 INFO  manager.ApplicationManager - All tests runs in Chrome Browser
+11:10:41.974 INFO  manager.WDListener - URLhttps://telranedu.web.app
+11:10:42.606 INFO  manager.ApplicationManager - The link --> https://telranedu.web.app/home
+11:10:42.618 INFO  tests.TestNGListener - start testing on date --->Mon Jun 02 11:10:42 IDT 2025
+11:10:42.645 INFO  tests.TestNGListener - failed test --->loginSuccessModel
+11:10:42.648 INFO  tests.TestNGListener - finish testing on date --->Mon Jun 02 11:10:42 IDT 2025

@@ -26,9 +26,9 @@ public class RegistrationTests extends TestBase {
                 .withEmail("test" + z + "@gmail.com")
                 .withPassword("vilevinQa!1234");
 
-
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationFormObj(user);
+        logger.info("Test data -->   email: " + user.getEmail() + " passwords: " + user.getPassword());
         app.getHelperUser().submitRegistration();
 
         Assert.assertTrue(app.getHelperUser().isLogged());

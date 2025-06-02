@@ -1,8 +1,15 @@
 package tests;
 
+import manager.DataProviderUser;
+import models.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class LoginTests extends TestBase {
 
@@ -17,13 +24,16 @@ public class LoginTests extends TestBase {
         }
     }
 
-    @Test
-    public void loginSuccess() {
-        logger.info("Start test with name 'loginSuccess'");
+    @Test(dataProvider = "loginData", dataProviderClass = DataProviderUser.class)
+    public void loginSuccess(String email, String password) {
+//        logger.info("Start test with name 'loginSuccess'");
         app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("test12@gmail.com", "vilevinQa!1234");
-        logger.info("Test data -->   email: 'test12@gmail.com' passwors: 'vilevinQa!1234'");
+//        app.getHelperUser().fillLoginRegistrationForm("test12@gmail.com", "vilevinQa!1234");
+//
+        app.getHelperUser().fillLoginRegistrationForm(email, password);
+        logger.info("TEST DATA --> email: " + email + " passwors: " + password);
         app.getHelperUser().submitLogin();
+
 //        Assert.assertEquals();
 //        Assert.assertNotEquals();
 //        Assert.assertTrue();
@@ -33,11 +43,12 @@ public class LoginTests extends TestBase {
         logger.info("Assert check is element 'sigh out' present");
     }
 
-    @Test
-    public void loginSuccessModel() {
+
+    @Test(dataProvider = "loginModels", dataProviderClass = DataProviderUser.class)
+    public void loginSuccessModel(User user) {
         app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("test12@gmail.com", "vilevinQa!1234");
-        logger.info("Test data -->   email: 'test12@gmail.com' passwors: 'vilevinQa!1234'");
+        app.getHelperUser().fillLoginRegistrationFormObj(user);
+        logger.info("Test data -->" + user.toString());
         app.getHelperUser().submitLogin();
 //        Assert.assertEquals();
 //        Assert.assertNotEquals();
