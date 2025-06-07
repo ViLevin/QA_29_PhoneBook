@@ -1,7 +1,9 @@
 package tests;
 
+import manager.DataProviderContact;
 import models.Contact;
 import models.User;
+import org.checkerframework.checker.units.qual.C;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -34,6 +36,20 @@ public class AddNewContactTests extends TestBase {
         app.getHelperContact().fillContactForm(contact);
 //        app.getHelperContact().pause(15000);
         app.getHelperContact().getScreen("src/test/screenshots/screen-" + i + ".png");
+        app.getHelperContact().saveContact();
+        Assert.assertTrue(app.getHelperContact().isContactAddedByName(contact.getName()));
+        Assert.assertTrue(app.getHelperContact().isContactAddedByPhone(contact.getPhone()));
+        logger.info("End");
+    }
+
+    @Test(dataProvider = "contactCSV", dataProviderClass = DataProviderContact.class)
+    public void addNewContactSuccessAllCSV(Contact contact) {
+        int i = (int) (Math.random() * 9000 + 1000);
+
+        app.getHelperContact().openAddContactForm();
+        app.getHelperContact().fillContactForm(contact);
+//        app.getHelperContact().pause(15000);
+        app.getHelperContact().getScreen("src/test/screenshots/AddNewCont" + i + ".png");
         app.getHelperContact().saveContact();
         Assert.assertTrue(app.getHelperContact().isContactAddedByName(contact.getName()));
         Assert.assertTrue(app.getHelperContact().isContactAddedByPhone(contact.getPhone()));
@@ -108,24 +124,14 @@ public class AddNewContactTests extends TestBase {
         logger.info("End");
     }
 
-    @Test
-    public void AddNewContactWrongPhone() {
-        logger.info("Start");
+    @Test(dataProvider = "contactWrongPhone", dataProviderClass = DataProviderContact.class)
+    public void AddNewContactWrongPhone(Contact contact) {
         int i = (int) (Math.random() * 9000 + 1000);
-
-        Contact contact = Contact.builder()
-                .name("Ben")
-                .lastName("Adam")
-                .email("ben@gmail.com")
-                .phone("")
-                .address("Israel, KfarSaba, Street, 5")
-                .description("wrong phone")
-                .build();
-
+        logger.info("Test run with data: " + contact.toString());
         app.getHelperContact().openAddContactForm();
         app.getHelperContact().fillContactForm(contact);
 //        app.getHelperContact().pause(15000);
-        app.getHelperContact().getScreen("src/test/screenshots/screen-" + i + ".png");
+        app.getHelperContact().getScreen("src/test/screenshots/wrongPhone" + i + ".png");
         app.getHelperContact().saveContact();
 
         Assert.assertTrue(app.getHelperContact().isAddNewContactPageStillDisplayed());

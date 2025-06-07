@@ -1,0 +1,86 @@
+17:44:59.115 INFO  manager.ApplicationManager - All tests runs in Chrome Browser
+17:44:59.591 INFO  manager.WDListener - URLhttps://telranedu.web.app
+17:45:00.238 INFO  manager.ApplicationManager -  The link --> https://telranedu.web.app/home
+17:45:00.251 INFO  tests.TestNGListener - start testing on date --->Thu Jun 05 17:45:00 IDT 2025
+17:45:00.267 INFO  manager.WDListener - Before find element --> By.xpath: //button[text()='Sign Out']
+17:45:05.328 INFO  manager.WDListener - After find element --> By.xpath: //a[text()='LOGIN']
+17:45:05.348 INFO  manager.WDListener - Location of element (1810, 34)
+17:45:05.383 INFO  manager.WDListener - Before click element atextLOGIN
+17:45:05.485 INFO  manager.WDListener - After click element 
+17:45:05.518 INFO  manager.WDListener - After find element --> By.name: email
+17:45:05.534 INFO  manager.WDListener - Location of element (760, 250)
+17:45:05.558 INFO  manager.WDListener - Before click element inputtext
+17:45:05.650 INFO  manager.WDListener - After click element 
+17:45:05.768 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:05.835 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:05.931 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:05.960 INFO  manager.WDListener - After find element --> By.name: password
+17:45:05.976 INFO  manager.WDListener - Location of element (760, 320)
+17:45:05.997 INFO  manager.WDListener - Before click element inputtext
+17:45:06.079 INFO  manager.WDListener - After click element 
+17:45:06.173 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:06.230 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:06.319 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:06.348 INFO  manager.WDListener - After find element --> By.xpath: //button[text()='Login']
+17:45:06.365 INFO  manager.WDListener - Location of element (760, 390)
+17:45:06.386 INFO  manager.WDListener - Before click element buttontextLogin
+17:45:06.467 INFO  manager.WDListener - After click element 
+17:45:06.485 INFO  tests.TestBase - Name of method ---> addNewContactSuccessAllCSV
+17:45:06.486 INFO  tests.TestNGListener - start test --->addNewContactSuccessAllCSV
+17:45:07.461 INFO  manager.WDListener - After find element --> By.xpath: //*[text() = 'ADD']
+17:45:07.478 INFO  manager.WDListener - Location of element (1499, 34)
+17:45:07.504 INFO  manager.WDListener - Before click element atextADD
+17:45:07.597 INFO  manager.WDListener - After click element 
+17:45:07.639 INFO  manager.WDListener - After find element --> By.cssSelector: [placeholder='Name']
+17:45:07.655 INFO  manager.WDListener - Location of element (300, 165)
+17:45:07.677 INFO  manager.WDListener - Before click element inputtext
+17:45:07.764 INFO  manager.WDListener - After click element 
+17:45:07.859 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:07.919 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:07.980 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:08.006 INFO  manager.WDListener - After find element --> By.cssSelector: [placeholder='Last Name']
+17:45:08.022 INFO  manager.WDListener - Location of element (300, 239)
+17:45:08.043 INFO  manager.WDListener - Before click element inputtext
+17:45:08.125 INFO  manager.WDListener - After click element 
+17:45:08.221 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:08.279 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:08.346 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:08.373 INFO  manager.WDListener - After find element --> By.cssSelector: [placeholder='Phone']
+17:45:08.389 INFO  manager.WDListener - Location of element (300, 313)
+17:45:08.410 INFO  manager.WDListener - Before click element inputtext
+17:45:08.494 INFO  manager.WDListener - After click element 
+17:45:08.593 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:08.653 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:08.738 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:08.765 INFO  manager.WDListener - After find element --> By.cssSelector: [placeholder='email']
+17:45:08.781 INFO  manager.WDListener - Location of element (300, 387)
+17:45:08.803 INFO  manager.WDListener - Before click element inputtext
+17:45:08.890 INFO  manager.WDListener - After click element 
+17:45:08.997 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:09.057 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:09.145 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:09.171 INFO  manager.WDListener - After find element --> By.cssSelector: [placeholder='Address']
+17:45:09.185 INFO  manager.WDListener - Location of element (300, 461)
+17:45:09.207 INFO  manager.WDListener - Before click element inputtext
+17:45:09.290 INFO  manager.WDListener - After click element 
+17:45:09.386 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:09.445 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:09.508 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:09.535 INFO  manager.WDListener - After find element --> By.cssSelector: [placeholder='description']
+17:45:09.550 INFO  manager.WDListener - Location of element (300, 535)
+17:45:09.572 INFO  manager.WDListener - Before click element inputtext
+17:45:09.653 INFO  manager.WDListener - After click element 
+17:45:09.750 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:09.804 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:09.874 INFO  manager.WDListener - sendKeys ---> inputtext
+17:45:10.288 INFO  manager.WDListener - After find element --> By.xpath: //*[text()='Save']
+17:45:10.303 INFO  manager.WDListener - Location of element (951, 622)
+17:45:10.324 INFO  manager.WDListener - Before click element btextSave
+17:45:10.402 INFO  manager.WDListener - After click element 
+17:45:10.402 INFO  manager.WDListener - Before find element --> By.cssSelector: h2
+17:45:11.068 INFO  manager.WDListener - Before find element --> By.cssSelector: h3
+17:45:11.153 INFO  tests.TestBase - End
+17:45:11.155 INFO  tests.TestNGListener - start test --->addNewContactSuccessAllCSV
+17:45:11.156 INFO  tests.TestBase - =====================================================================================
+17:45:11.157 INFO  tests.TestNGListener - failed test --->addNewContactSuccessAllCSV
+17:45:11.160 INFO  tests.TestNGListener - finish testing on date --->Thu Jun 05 17:45:11 IDT 2025

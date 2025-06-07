@@ -58,6 +58,20 @@ public class LoginTests extends TestBase {
         logger.info("Assert check is element 'sigh out' present");
     }
 
+    @Test(dataProvider = "loginFile", dataProviderClass = DataProviderUser.class)
+    public void loginSuccessModelDPF(User user) {
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationFormObj(user);
+        logger.info("Test data -->" + user.toString());
+        app.getHelperUser().submitLogin();
+//        Assert.assertEquals();
+//        Assert.assertNotEquals();
+//        Assert.assertTrue();
+//        Assert.assertFalse();
+        Assert.assertTrue(app.getHelperUser().isLogged());
+        logger.info("Assert check is element 'sigh out' present");
+    }
+
     @Test
     public void loginWrongEmail() {
         app.getHelperUser().openLoginRegistrationForm();

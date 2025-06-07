@@ -1,0 +1,29 @@
+17:15:36.842 INFO  manager.ApplicationManager - All tests runs in Chrome Browser
+17:15:37.349 INFO  manager.WDListener - URLhttps://telranedu.web.app
+17:15:38.030 INFO  manager.ApplicationManager -  The link --> https://telranedu.web.app/home
+17:15:38.044 INFO  tests.TestNGListener - start testing on date --->Thu Jun 05 17:15:38 IDT 2025
+17:15:38.057 INFO  manager.WDListener - Before find element --> By.xpath: //button[text()='Sign Out']
+17:15:43.118 INFO  manager.WDListener - After find element --> By.xpath: //a[text()='LOGIN']
+17:15:43.137 INFO  manager.WDListener - Location of element (1810, 34)
+17:15:43.172 INFO  manager.WDListener - Before click element atextLOGIN
+17:15:43.273 INFO  manager.WDListener - After click element 
+17:15:43.309 INFO  manager.WDListener - After find element --> By.name: email
+17:15:43.325 INFO  manager.WDListener - Location of element (760, 250)
+17:15:43.348 INFO  manager.WDListener - Before click element inputtext
+17:15:43.443 INFO  manager.WDListener - After click element 
+17:15:43.565 INFO  manager.WDListener - sendKeys ---> inputtext
+17:15:43.630 INFO  manager.WDListener - sendKeys ---> inputtext
+17:15:43.720 INFO  manager.WDListener - sendKeys ---> inputtext
+17:15:43.750 INFO  manager.WDListener - After find element --> By.name: password
+17:15:43.766 INFO  manager.WDListener - Location of element (760, 320)
+17:15:43.787 INFO  manager.WDListener - Before click element inputtext
+17:15:43.872 INFO  manager.WDListener - After click element 
+17:15:43.968 INFO  manager.WDListener - sendKeys ---> inputtext
+17:15:44.026 INFO  manager.WDListener - sendKeys ---> inputtext
+17:15:44.109 INFO  manager.WDListener - sendKeys ---> inputtext
+17:15:44.138 INFO  manager.WDListener - After find element --> By.xpath: //button[text()='Login']
+17:15:44.153 INFO  manager.WDListener - Location of element (760, 390)
+17:15:44.173 INFO  manager.WDListener - Before click element buttontextLogin
+17:15:44.263 INFO  manager.WDListener - After click element 
+17:15:44.274 INFO  tests.TestNGListener - failed test --->AddNewContactWrongPhone
+17:15:44.277 INFO  tests.TestNGListener - finish testing on date --->Thu Jun 05 17:15:44 IDT 2025
