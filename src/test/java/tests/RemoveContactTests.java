@@ -18,11 +18,10 @@ public class RemoveContactTests extends TestBase {
     }
 
     @BeforeMethod
-    public void preMethod(){
+    public void preMethod() {
 //  checkUp ContactList
         app.getHelperContact().provideContacts();///if list of contact <3 --> add 3 contacts
     }
-
 
 
 //    public void preMethod() throws InterruptedException {
@@ -42,6 +41,7 @@ public class RemoveContactTests extends TestBase {
 
     @Test(priority = 1)
     public void removeFirstContact() {
+
         Assert.assertEquals(app.getHelperContact().removeOneContact(), 1);
     }
 
@@ -49,7 +49,7 @@ public class RemoveContactTests extends TestBase {
 //
 
 
-    @Test(priority = 2)
+    @Test
     public void removeAllContacts() {
 
         app.getHelperContact().removeAllContacts();
