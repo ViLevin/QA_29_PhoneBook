@@ -14,7 +14,7 @@ import java.util.List;
 public class LoginTests extends TestBase {
 
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preCondition() {
 
         //if 'Sign Out' present ---> logout
@@ -72,7 +72,7 @@ public class LoginTests extends TestBase {
         logger.info("Assert check is element 'sigh out' present");
     }
 
-    @Test
+    @Test(groups = {"smoke"})
     public void loginWrongEmail() {
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("test12gmail.com", "vilevinQa!1234");

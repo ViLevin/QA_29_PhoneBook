@@ -3,8 +3,10 @@
 <suite name="Suite1" verbose="1">
     <test name="Nopackage">
         <classes>
+            <class name="tests.RegistrationTests"/>
             <class name="tests.LoginTests"/>
-            
+            <class name="tests.AddNewContactTests"/>
+            <class name="tests.RemoveContactTests"/>
         </classes>
     </test>
 

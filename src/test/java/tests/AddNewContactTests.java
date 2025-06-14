@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class AddNewContactTests extends TestBase {
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     //login
     public void preCondition() {
         if (!app.getHelperUser().isLogged()) {
@@ -19,7 +19,7 @@ public class AddNewContactTests extends TestBase {
     }
 
 
-    @Test
+    @Test(groups = {"smoke", "regress", "retest"})
     public void addNewContactSuccessAll() {
         logger.info("Start");
         int i = (int) (Math.random() * 9000 + 1000);

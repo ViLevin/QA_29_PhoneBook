@@ -47,32 +47,30 @@ task qa(type: Test) {
                 "${browser}"
 
     }
-//
-//}
-//
-//
-//task scoup(type: Test) {
-//    useTestNG() {
-//        suites 'src/test/resources/scoupe.xml'
-//    }
-//
-//    if (project.hasProperty('browser')) {
-//        systemProperty 'browser',
-//
-//                "${browser}"
-//
-//    }
-//}
-//
-//
-//task team(type: Test) {
-//    useTestNG() {
-//        def groups = System.getProperty('groups')
-//        if (groups != null) {
-//            includeGroups groups
-//        }
-//
-//        suites 'src/test/resources/base.xml'
-//
-//    }
+
+    task scoup(type: Test) {
+        useTestNG() {
+            suites 'src/test/resources/scoupe.xml'
+        }
+
+        if (project.hasProperty('browser')) {
+            systemProperty 'browser',
+
+                    "${browser}"
+
+        }
+    }
+
+
+    task team(type: Test) {
+        useTestNG() {
+            def groups = System.getProperty('groups')
+            if (groups != null) {
+                includeGroups groups
+            }
+
+            suites 'src/test/resources/base.xml'
+
+        }
+    }
 }
